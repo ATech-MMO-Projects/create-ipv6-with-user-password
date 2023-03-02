@@ -74,7 +74,7 @@ stacksize 6291456
 flush
 auth strong
 users $USER_NAME:CL:$PASSWORD
--e "allow * * * *"
+allow * * * *
 
 
 flush
