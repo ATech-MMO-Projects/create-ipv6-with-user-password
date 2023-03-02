@@ -137,7 +137,3 @@ ulimit -n 65535
 EOF
 
 bash /etc/rc.local
-
-
-
-wget -O contabo.sh https://raw.githubusercontent.com/maibaoloc/create-ipv6-with-user-password/main/contabo.sh && chmod +x contabo.sh && bash contabo.sh -u "n2l" -p "N2L123"
