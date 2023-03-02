@@ -70,6 +70,13 @@ timeouts 1 5 30 60 180 1800 15 60
 setgid 65535
 setuid 65535
 stacksize 6291456 
+
+echo flush
+echo auth strong
+echo users $USER_NAME:CL:$PASSWORD
+echo -e "allow * * * *"
+
+
 flush
 $(awk -F "/" '{print "proxy -6 -u -n -a -p" $4 " -i" $3 " -e"$5""}' ${WORKDATA})
 flush
@@ -130,3 +137,7 @@ ulimit -n 65535
 EOF
 
 bash /etc/rc.local
+
+
+
+wget -O contabo.sh https://raw.githubusercontent.com/maibaoloc/create-ipv6-with-user-password/main/contabo.sh && chmod +x contabo.sh && bash contabo.sh -u "n2l" -p "N2L123"
