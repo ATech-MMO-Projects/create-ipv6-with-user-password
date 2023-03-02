@@ -71,10 +71,10 @@ setgid 65535
 setuid 65535
 stacksize 6291456 
 
-echo flush
-echo auth strong
-echo users $USER_NAME:CL:$PASSWORD
-echo -e "allow * * * *"
+flush
+auth strong
+users $USER_NAME:CL:$PASSWORD
+-e "allow * * * *"
 
 
 flush
