@@ -78,7 +78,7 @@ allow * * * *
 
 
 flush
-$(awk -F "/" '{print "proxy -6 -u -n -a -p" $4 " -i" $3 " -e"$5""}' ${WORKDATA})
+$(awk -F "/" '{print "proxy -6 -n -a -p" $4 " -i" $3 " -e"$5""}' ${WORKDATA})
 flush
 EOF
 }
